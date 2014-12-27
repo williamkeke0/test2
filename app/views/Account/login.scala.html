@@ -1,0 +1,19 @@
+@main("登陆") {
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/account/login.css")"/>
+
+    <div class="jumbotron">
+        <form action="@routes.Account.postLogin()" method="POST" class="form-login" role="form">
+            <h2 class="form-login-heading">登录</h2>
+            <input type="text" class="form-control" name="name" id="name" placeholder="用户名" maxlength="255" required autofocus>
+            <input type="password" class="form-control" name="pwd" id="pwd" placeholder="密码" required>
+            <label class="checkbox">
+                <input type="checkbox" name="remember" checked=true> 自动登录
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                <i class="fa fa-sign-in"></i>
+                登录
+            </button>
+        </form>
+    </div>
+}
+
